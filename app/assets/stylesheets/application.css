@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+
+ * {
+	box-sizing: border-box;
+}
+
+.container {
+	padding-top: 90px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.container-fluid {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

@@ -14,9 +14,8 @@
  *= require_self
  */
 
- <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 
- * {
+* {
 	box-sizing: border-box;
 }
 

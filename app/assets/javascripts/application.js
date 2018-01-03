@@ -14,3 +14,13 @@
 //= require turbolinks
 //= require jquery3
 //= require_tree .
+
+/*
+$('#top_img').dblclick(function(){
+    $('#top_img').toggle();
+});
+
+$('#bottom_img').dblclick(function(){
+    $('#top_img').toggle();
+});
+*/

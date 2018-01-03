@@ -36,3 +36,11 @@
 	margin-right: auto;
 	width: 100%;
 }
+
+.button-group {
+	margin: 20px;
+}
+
+.btn {
+	margin: 10px;
+}

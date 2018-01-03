@@ -44,3 +44,27 @@
 .btn {
 	margin: 10px;
 }
+
+.btn-sdl-homepage {
+	margin: 18px;
+}
+
+#crossfade {
+  position:relative;
+  height:283px;
+  width:424px;
+  margin:0 auto;
+}
+
+#crossfade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#crossfade img.top:hover {
+  opacity:0;
+}

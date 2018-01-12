@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/login'
+  get 'simple_pages/landing_page'
 
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]

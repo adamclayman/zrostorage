@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create(name: "Seed-generated 5' x 10'", description: "Seed-generated 5'x10' storage unit.", colour: "white", image_url: "/images/10x5.png", price: "$55.00")
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)

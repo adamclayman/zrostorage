@@ -1,14 +1,10 @@
 
-<p>
-	<strong>Order No.: </strong><br>
-	<%= @order.id %>
+<br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Order <%= @order.id %></h5>
+    <p class="card-text">Product <%= @order.product_id %></p>
+    <p class="card-text">User <%= @order.user_id %>
 </p>
-<p>
-  <strong>Order User ID: </strong><br>
-  <%= @order.user_id %>
-</p>
-
-<p>
-  <strong>Order Product ID: </strong><br>
-  <%= @order.product_id %>
-</p>
+  </div>
+</div>

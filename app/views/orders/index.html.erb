@@ -1,17 +1,14 @@
 <div class="row">
 	<% @orders.each do |order| %>
 		<div class="col-sm-2 col-md-4">
-			<h3>Order # <%= order.id %>:
-				<%= link_to order.product.name, order.product %>
-				
-			</h3>
-			<p><%= order.product.description %></p>
-			<strong>$ <%= order.product.price %></strong><br>
-			<tbody>
-				<tr>
-				    <td><%= link_to 'Show', order %></td>
-				</tr>
-        	</tbody>
+			<div class="card bg-light mb-3" style="max-width: 18rem;">
+			  <div class="card-header">Order <%= order.id %>: <%= link_to order.product.name, order.product %></div>
+			  <div class="card-body">
+			    <h5 class="card-title"><%= order.product.description %></h5>
+			    <p class="card-text">$ <%= order.product.price %></p>
+			    <p><%= link_to 'Show', order %></p>
+			  </div>
+			</div>
 		</div><!-- /col -->
 	<% end %>
 </div>

@@ -26,10 +26,10 @@
 			<span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="/#">Home<span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="/simple_pages/about.html">About</a>
-					<a class="nav-item nav-link" href="/simple_pages/login.html">Log-in</a>
-					<a class="nav-item nav-link" href="/simple_pages/contact.html">Contact</a>
+					<%= link_to "Home", root_path, class: "nav-item nav-link active" %>
+					<%= link_to "About", simple_pages_about_path, class: "nav-item nav-link" %>
+					<%= link_to "Log-in", simple_pages_login_path, class: "nav-item, nav-link" %>
+					<%= link_to "Contact", simple_pages_contact_path, class: "nav-item nav-link" %>
 				</div>
 			</div>
 		</nav>

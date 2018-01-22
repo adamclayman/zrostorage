@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
   get 'simple_pages/login'
   get 'simple_pages/landing_page'
+  post 'simple_pages/thank_you'
 
   resources :products
   resources :users, except: [:index]

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
+  resources :users
   root 'simple_pages#landing_page' # root 'simple_pages#index'
 
   get 'simple_pages/index'

@@ -8,24 +8,31 @@
 			<%= flash[:notice] %>
 
 			<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-				<div class="row">
+				<div class="row">					
 					<div class="form-group">
 						<%= form.label :name %>
 						<%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
 					</div>
+				</div>
+				<div class="row">
 					<div class="form-group">
 						<%= form.label :email %>
 						<%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
 					</div>
+				</div>
+				<div class="row">
 					<div class="form-group">
 						<%= form.label :message %>
-						<%= form.text_field :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+						<%= form.text_area :message, class: "form-control", placeholder: "Enter Message", size: "60x6" %>
 					</div>
 				</div>
 				<%= form.submit "Send", class: "form_label" %>
 			<% end %>
-				
-			<p>Write us at <a href="mailto:info@zrostorage.org">info@zrostorage.org</a>.</p>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<h4 class="lead">Or write us at <a href="mailto:zrostorage@clayman.org">zrostorage@clayman.org</a>.</p>
 		</div>
 	</div>
 </div>

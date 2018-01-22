@@ -30,6 +30,10 @@
 					<%= link_to "About", simple_pages_about_path, class: "nav-item nav-link" %>
 					<%= link_to "Log-in", simple_pages_login_path, class: "nav-item, nav-link" %>
 					<%= link_to "Contact", simple_pages_contact_path, class: "nav-item nav-link" %>
+					<%= form_with(url: products_path, method: 'get', local: true, class: "form-inline pull-right") do |form| %>
+						<%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search", class: "form-control-sm" %>
+						<%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0 form-control-sm" %>
+					<% end %>
 				</div>
 			</div>
 		</nav>

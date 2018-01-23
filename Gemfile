@@ -8,6 +8,9 @@ git_source(:github) do |repo_name|
 end
 
 
+# Load environment variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use Puma as the app server

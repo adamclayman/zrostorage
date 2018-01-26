@@ -27,5 +27,8 @@ module ZROstorage
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Devise gem recommends this setting for Heroku production
+    config.assets.initialize_on_precompile = false
   end
 end

@@ -1,5 +1,6 @@
-class User
-  include Mongoid::Document
-  field :first_name, type: String
-  field :last_name, type: String
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end

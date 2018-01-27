@@ -70,3 +70,10 @@
 #crossfade img.top:hover {
   opacity:0;
 }
+
+/* Account Sign-up Forms (Devise Gem Views) */
+.form-signin, .registration-form, .forgot-password-form {
+	max-width: 400px;
+	padding: 15px;
+	margin: 0 auto;
+}

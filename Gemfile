@@ -35,6 +35,8 @@ gem 'carrierwave'
 # gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 # For authentication
 gem 'devise'
+# For authorization
+gem 'cancancan', '~> 1.10'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

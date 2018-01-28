@@ -24,3 +24,8 @@ $('#bottom_img').dblclick(function(){
     $('#top_img').toggle();
 });
 */
+
+/*
+
+$('.alert').delay().fadeOut();
+*/

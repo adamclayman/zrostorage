@@ -7,38 +7,36 @@
         <p><%= @product.description %></p>
         <% if @product.comments != nil %>
           <span>Avg. Rating: </span>
+          <% total = 0.0 %>
+          <% comment_counter = 0 %>
+          <% for comment in @product.comments %>
+            <% total += comment.rating %>
+            <% comment_counter += 1 %>
+          <% end %>
+          <%= (total / comment_counter).round(1) %>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
-        <div id="rating-stars">
-          <span class="glyphicon glyphicon-star">Star</span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>      
+        <div id="rating-comment-stars">
+          <% if @product.comments != nil %>
+            <% for comment in @product.comments %>
+              <div>
+                <p>
+                  <b>User <%= comment.user_id %> Rating: </b><br>
+                  <% i = 0 %>
+                  <% while i < comment.rating %>
+                    <i data-feather="star"></i>
+                    <% i += 1 %>
+                  <% end %>                  
+                </p>
+                <p><%= comment.body %></p>
+              </div>
+            <% end %>
+          <% end %>          
         </div>
-        <% if @product.comments != nil %>
-          <% for comment in @product.comments %>
-            <div>
-              <p>
-                <span class="glyphicon glyphicon-comment"></span>
-                <b>User <%= comment.user_id %></b><br>
-                <span>Rating:</span> 
-              </p>
-              <% i = 0 %>
-              <% while i < comment.rating %>
-                <span class="glyphicon glyphicon-star"></span>
-                <% i += 1 %>
-              <% end %>
-            </div>
-          <% end %>
-        <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

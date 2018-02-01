@@ -5,7 +5,7 @@
       <div class="caption">
         <h4><%= @product.name %></h4>
         <p><%= @product.description %></p>
-        <% if @product.comments != nil %>
+        <% if @product.comments.count != 0 %>
           <span>Avg. Rating: </span>
           <% total = 0.0 %>
           <% comment_counter = 0 %>
@@ -14,6 +14,8 @@
             <% comment_counter += 1 %>
           <% end %>
           <%= (total / comment_counter).round(1) %>
+        <% else %>
+          <h5>Be the first to review!</h5>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
         <div id="rating-comment-stars">
@@ -37,6 +39,8 @@
     </div>
   </div>
 </div>
+
+<script>feather.replace();</script>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

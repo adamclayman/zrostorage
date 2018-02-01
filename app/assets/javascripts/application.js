@@ -25,6 +25,7 @@ $('#bottom_img').dblclick(function(){
 });
 */
 
+
 $(document).ready(function(){
   $('.alert').delay(800).fadeOut(400);
   $('.notice').delay(800).fadeOut(400);

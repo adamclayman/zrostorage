@@ -37,8 +37,6 @@ gem 'carrierwave'
 gem 'devise'
 # For authorization
 gem 'cancancan', '~> 1.10'
-# For glyphicons
-# gem 'octicons-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -38,7 +38,7 @@ gem 'devise'
 # For authorization
 gem 'cancancan', '~> 1.10'
 # For pagination
-gem 'will_paginate', '~> 3.10'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

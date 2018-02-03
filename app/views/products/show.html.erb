@@ -4,7 +4,11 @@
       <%= image_tag(@product.image_url, alt: @product.description) %>
       <div class="caption">
         <h4><%= @product.name %></h4>
-        <p><%= @product.description %></p>
+        <p>
+          <%= @product.description %><br>
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>
+        </p>
         <% if @product.comments.count != 0 %>
           <p>Avg. Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
         <% else %>
@@ -22,8 +26,7 @@
 </div>
 
 <%= render 'comments' %>
+<%= will_paginate @comments %>
 
 <script>feather.replace();</script>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

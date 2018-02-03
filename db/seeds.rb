@@ -15,3 +15,6 @@ user2 = User.create! :first_name => 'Adam', :last_name => 'Clayman', :email => '
 Comment.create!(user: User.first, product: Product.first, rating: 1, body: "I hate the storage service I received.")
 Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I absolutely love this company. Sign me up for a decade!")
 Comment.create!(user: User.second, product: Product.first, rating: 2, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")
+Comment.create!(user: User.first, product: Product.first, rating: 1, body: "I hate the storage service I received.")
+Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I absolutely love this company. Sign me up for a decade!")
+Comment.create!(user: User.second, product: Product.first, rating: 2, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")

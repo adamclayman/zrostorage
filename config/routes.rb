@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
   post 'simple_pages/thank_you'
 
-  resources :products
+  resources :products do
+    resources :comments
+  end
+  
   resources :users, except: [:index]
   resources :orders, only: [:index, :show, :create, :destroy]
 

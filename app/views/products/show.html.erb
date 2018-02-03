@@ -6,42 +6,24 @@
         <h4><%= @product.name %></h4>
         <p><%= @product.description %></p>
         <% if @product.comments.count != 0 %>
-          <span>Avg. Rating: </span>
-          <% total = 0.0 %>
-          <% comment_counter = 0 %>
-          <% for comment in @product.comments %>
-            <% total += comment.rating %>
-            <% comment_counter += 1 %>
-          <% end %>
-          <%= (total / comment_counter).round(1) %>
+          <p>Avg. Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
         <% else %>
           <h5>Be the first to review!</h5>
+          <% if signed_in? == false %>
+            <h5>Just sign in first!</h5>
+          <% end %>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
-        <div id="rating-comment-stars">
-          <% if @product.comments != nil %>
-            <% for comment in @product.comments %>
-              <div>
-                <p>
-                  <b>User <%= comment.user_id %> Rating: </b><br>
-                  <% i = 0 %>
-                  <% while i < comment.rating %>
-                    <i data-feather="star"></i>
-                    <% i += 1 %>
-                  <% end %>                  
-                </p>
-                <p><%= comment.body %></p>
-              </div>
-            <% end %>
-          <% end %>          
-        </div>
+        <%= render 'new_comment' %>
+
       </div>
     </div>
   </div>
 </div>
 
+<%= render 'comments' %>
+
 <script>feather.replace();</script>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
-

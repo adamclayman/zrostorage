@@ -28,11 +28,6 @@ module ZROstorage
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    # Add vendor folder to path
-    config.asset.paths << '/vendor/assets/javascripts'
-    config.asset.paths << '/vendor/assets/stylesheets'
-    config.asset.paths << '/vendor/assets/images'
-
     # Devise gem recommends this setting for Heroku production
     config.assets.initialize_on_precompile = false
   end

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, controllers: { registrations: "user_registrations" }
   resources :users
   root 'simple_pages#index' # root 'simple_pages#index'
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  
+
   resources :users, except: [:index]
   resources :orders, only: [:index, :show, :create, :destroy]
 

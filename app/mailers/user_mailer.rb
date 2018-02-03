@@ -7,4 +7,9 @@ class UserMailer < ApplicationMailer
 			to: 'zrostorage@clayman.org',
 			subject: "A new contact form message from #{name}")
 	end
+
+	def welcome(user)
+		@appname = "ZRO Storage"
+		mail(to: user.email, subject: "Welcome to #{@appname}")
+	end
 end

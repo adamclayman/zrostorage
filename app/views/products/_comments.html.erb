@@ -9,9 +9,15 @@
 					<%= "#{time_ago_in_words(comment.created_at)} ago" %>
 						
 				</em></small>
+				
+				<% if signed_in? && current_user.admin? %>
+					<%= link_to 'Destroy', product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?', feather: 'trash-2' } %>
+				<% end %>
 			</p>
+
 			<p><%= "Rating: #{comment.rating}/5" %></p>
 			<p><%= comment.body %></p>
 		</div>
 	<% end %>
 </div>
+<script>feather.replace()</script>

@@ -37,6 +37,8 @@ gem 'carrierwave'
 gem 'devise'
 # For authorization
 gem 'cancancan', '~> 1.10'
+# For pagination
+gem 'will_paginate', '~> 3.10'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

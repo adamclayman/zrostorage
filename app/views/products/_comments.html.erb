@@ -7,11 +7,10 @@
 				<%= comment.user.first_name %>
 				<small><em>
 					<%= "#{time_ago_in_words(comment.created_at)} ago" %>
-						
 				</em></small>
 				
 				<% if signed_in? && current_user.admin? %>
-					<%= link_to 'Destroy', product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?', feather: 'trash-2' } %>
+					<%= link_to("Destroy", product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?', feather: 'trash-2' }) %>
 				<% end %>
 			</p>
 
@@ -20,4 +19,3 @@
 		</div>
 	<% end %>
 </div>
-<script>feather.replace()</script>

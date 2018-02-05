@@ -42,6 +42,7 @@ gem 'will_paginate', '~> 3.1.0'
 # For controller testing
 gem 'rails-controller-testing'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -57,6 +58,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # As a testing framework
   gem 'rspec-rails', '~> 3.7'
+  # For Factory-based testing
+  gem 'factory_girl_rails', "~> 4.0"
 end
 
 group :development do

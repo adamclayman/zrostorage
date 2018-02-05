@@ -8,6 +8,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'spec_helper'
 require 'rspec/rails'
 require 'devise'
+require 'support/factory_bot'
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?

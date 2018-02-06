@@ -8,7 +8,8 @@ class PaymentsController < ApplicationController
 				amount: @product.price, # Requires decimal round care and attention
 				currency: "usd",
 				source: token,
-				description: params[:stripeEmail]
+				description: params[:stripeEmail],
+				receipt_email: @user.email
 			)
 
 			if charge.paid

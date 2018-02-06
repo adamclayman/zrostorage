@@ -6,8 +6,6 @@
         <h4><%= @product.name %></h4>
         <p>
           <%= @product.description %><br>
-          <%= link_to 'Edit', edit_product_path(@product) %> |
-          <%= link_to 'Back', products_path %>
         </p>
         <% if @product.comments.count != 0 %>
           <p>Avg. Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
@@ -18,6 +16,10 @@
           <% end %>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
         <%= render 'new_comment' %>
 
       </div>

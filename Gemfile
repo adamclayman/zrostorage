@@ -41,6 +41,8 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 # For controller testing
 gem 'rails-controller-testing'
+# For payments infrastructure
+gem 'stripe'
 
 
 # Use Redis adapter to run Action Cable in production
@@ -60,8 +62,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   # For Factory-based testing
   gem 'factory_bot', '~> 4.0'
-  gem 'factory_girl_rails', "~> 4.0"
-
+  gem 'factory_bot_rails'
 end
 
 group :development do

@@ -59,7 +59,9 @@ group :development, :test do
   # As a testing framework
   gem 'rspec-rails', '~> 3.7'
   # For Factory-based testing
+  gem 'factory_bot', '~> 4.0'
   gem 'factory_girl_rails', "~> 4.0"
+
 end
 
 group :development do

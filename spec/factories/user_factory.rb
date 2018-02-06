@@ -7,7 +7,7 @@ FactoryBot.define do
 		admin false
 	end
 
-	factory :user2 do
+	factory :usertwo do
 		email 'adam+11@clayman.org'
 		passsword 'Password'
 		first_name 'Adam'

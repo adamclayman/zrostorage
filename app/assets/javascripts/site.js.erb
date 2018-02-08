@@ -1,0 +1,13 @@
+$(document).on('turbolinks:load', function() {
+	$('.rating').raty({
+		starHalf: '<%= asset_path 'star-half.png' %>',
+		starOff: '<%= asset_path 'star-off.png' %>',
+		starOn: '<%= asset_path 'star-on.png' %>'
+	});
+});
+
+$(document).ready(function(){
+  $('.alert').delay(1500).fadeOut(400);
+  $('.notice').delay(1500).fadeOut(400);
+  feather.replace();
+});

@@ -1,4 +1,7 @@
 <div class="row">
+	<% @orders = @orders.select do |order| %>
+		<% order.user_id == current_user || current_user.admin == true %>
+	<% end %>
 	<% @orders.each do |order| %>
 		<div class="col-sm-2 col-md-4">
 			<div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -10,5 +13,8 @@
 			  </div>
 			</div>
 		</div><!-- /col -->
+	<% end %>
+	<% if @orders == {} %>
+		<h4>You don't have any orders yet.</h4>
 	<% end %>
 </div>

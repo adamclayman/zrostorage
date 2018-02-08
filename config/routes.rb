@@ -12,12 +12,17 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
   post 'simple_pages/thank_you'
 
+  authenticated :admin do
+    resources :products, only: [:new, :create, :edit, :update, :destroy]
+  end
   resources :products do
     resources :comments
   end
 
   resources :users, except: [:index]
+
   resources :orders, only: [:index, :show, :create, :destroy]
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

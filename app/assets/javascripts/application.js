@@ -24,10 +24,3 @@ $('#bottom_img').dblclick(function(){
     $('#top_img').toggle();
 });
 */
-
-
-$(document).ready(function(){
-  $('.alert').delay(1500).fadeOut(400);
-  $('.notice').delay(1500).fadeOut(400);
-  feather.replace();
-});

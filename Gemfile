@@ -64,6 +64,7 @@ group :development, :test do
   # For Factory-based testing
   gem 'factory_bot', '~> 4.0'
   gem 'factory_bot_rails'
+  gem 'database_cleaner'
 end
 
 group :development do

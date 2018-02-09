@@ -30,5 +30,8 @@ module ZROstorage
 
     # Devise gem recommends this setting for Heroku production
     config.assets.initialize_on_precompile = false
+
+    # Redis requirement
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 end

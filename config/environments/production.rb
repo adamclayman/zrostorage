@@ -102,4 +102,8 @@ Rails.application.configure do
 
   # Default URLs
   config.action_mailer.default_url_options = { :host => 'zrostorage.herokuapp.com'}
+
+  # Enable ActionCable
+  config.web_socket_server_url = "wss://zrostorage.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://zrostorage.herokuapp.com', 'http://zrostorage.herokuapp.com']
 end

@@ -1,11 +1,11 @@
 class PaymentsController < ApplicationController
 	def create
-		@product = params[:product_id]
+		@product = Product.find(params[:product_id])
 		@user = current_user
 		token = params[:stripeToken]
 		begin
 			charge = Stripe::Charge.create(
-				amount: @product.price, # Requires decimal round care and attention
+				amount: (@product.price * 100).to_i, # Requires decimal round care and attention
 				currency: "usd",
 				source: token,
 				description: params[:stripeEmail],

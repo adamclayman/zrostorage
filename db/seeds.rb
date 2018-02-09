@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create(name: "5' x 10' Locker", description: "5'x10' storage unit. Seed #1", colour: "Unimportant", image_url: "/images/10x5.png", price: "55.00")
-Product.create(name: "10' x 10' Locker", description: "10'x10' storage unit. Seed #2", colour: "Unimportant", image_url: "/images/10x10.png", price: "110.00")
+Product.create(name: "5 x 10 Locker", description: "5x10 storage unit. Seed #1", colour: "Unimportant", image_url: "/images/10x5.png", price: "55.00")
+Product.create(name: "10 x 10 Locker", description: "10x10 storage unit. Seed #2", colour: "Unimportant", image_url: "/images/10x10.png", price: "110.00")
 Order.create(user_id: 1, product_id: 1, total: 10.0)
 Order.create(user_id: 1, product_id: 2, total: 5.0)
 user1 = User.create! :first_name => 'Adam', :last_name => 'Clayman', :email => 'adam@clayman.org', :password => 'Password', :password_confirmation => 'Password', :admin => true

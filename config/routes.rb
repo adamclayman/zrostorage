@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
 
   post 'simple_pages/thank_you'
-# post 'payment/create'
+  post 'payments/create'
 
   authenticated :admin do
     resources :products, only: [:new, :create, :edit, :update, :destroy]

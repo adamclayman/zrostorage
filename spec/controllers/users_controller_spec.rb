@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-	@user = FactoryBot.create(:user)
-	@usertwo = FactoryBot.create(:user)
-	@useradmin = FactoryBot.create(:user, :admin)
+	before do
+		@user = FactoryBot.create(:user)
+		@usertwo = FactoryBot.create(:user)
+		@useradmin = FactoryBot.create(:user, :admin)
+	end
 
 	describe 'GET #show' do
 		context 'when a user is logged in' do
@@ -24,9 +26,9 @@ describe UsersController, type: :controller do
 			end
 
 			it 'does not show usertwo the show page of another' do
-				get :show, params: { id: user.id }
+				get :show, params: { id: @user.id }
 				expect(response).to_not be_ok
-				expect(assigns(:user)).to eq usertwo
+				expect(assigns(:user)).to eq @user
 				expect(response).to redirect_to(root_path)
 			end
 		end

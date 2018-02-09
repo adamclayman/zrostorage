@@ -26,7 +26,7 @@ describe UsersController, type: :controller do
 			it 'does not show usertwo the show page of another' do
 				get :show, params: { id: user.id }
 				expect(response).to_not be_ok
-				expect(assigns(:user)).to eq user
+				expect(assigns(:user)).to eq usertwo
 				expect(response).to redirect_to(root_path)
 			end
 		end

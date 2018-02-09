@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% cache(cache_key_for_products) do %>
+  <% render @products %>
+<% end %>
+
 <h1>Products</h1>
 
 <table>

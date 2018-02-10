@@ -6,13 +6,9 @@ class ProductChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def listen
-  	data["product_id"] = @product.id # Not sure if this is correct...
+  def listen(data)
   	stop_all_streams
   	stream_for data["product_id"]
   end
 
-  $(document).on('turbolinks:load', function(){
-  		App.product.listen_to_comments();
-  	});
 end

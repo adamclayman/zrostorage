@@ -1,4 +1,7 @@
+<% @product.viewed! %>
+
 <% cache @product do %>
+
 
 <div class="row" data-product-id="<%= @product.id %>">
   <div class="col-sm-12">
@@ -38,3 +41,10 @@
 <script>feather.replace();</script>
 
 <% end %>
+
+<h6>
+  Views: 
+  <span class="badge">
+    <%= @product.views %>
+  </span>
+</h6>

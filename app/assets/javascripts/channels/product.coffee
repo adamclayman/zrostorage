@@ -7,4 +7,10 @@ App.product = App.cable.subscriptions.create "ProductChannel",
 
   received: (data) ->
   	$(".alert.alert-info").show()
+  	console.log(data.comment.body)
     # Called when there's incoming data on the websocket for this channel
+
+  listen_to_comments: ->
+  	return this.perform('listen', {
+  		product_id: $("[data-product-id]").data("product-id")
+  	});

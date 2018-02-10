@@ -1,6 +1,6 @@
 <% cache @product do %>
 
-<div class="row">
+<div class="row" data-product-id="<%= @product.id %>">
   <div class="col-sm-12">
     <div class="thumbnail">
       <%= image_tag(@product.image_url, width: "350", alt: @product.description, class: "img-zoom", data_zoom_image: @product.image_url) %>

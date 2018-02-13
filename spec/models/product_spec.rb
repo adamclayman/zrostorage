@@ -10,7 +10,7 @@ describe Product do
 	end
 
 	it "returns the average rating of all comments" do
-		
+		expect(product.average_rating).to eq 3 
 	end
 
 	it "shows that a product without a name is invalid" do

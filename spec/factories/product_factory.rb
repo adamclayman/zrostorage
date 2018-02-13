@@ -3,6 +3,7 @@ FactoryBot.define do
 		sequence(:name) { |n| "Product #{n} name" }
 		sequence(:description) { |n| "Product #{n} long description"} 
 		sequence(:image_url) { |n| "http://images.google.com/#{n}" }
-		sequence(:price) { |n| "#{}"}
+		sequence(:price) { |n| n}
+		comments
 	end
 end

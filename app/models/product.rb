@@ -2,6 +2,8 @@ class Product < ApplicationRecord
 	has_many :orders
 	has_many :comments, dependent: :destroy
 	validates :name, presence: true
+	validates :description, presence: true
+	validates :price, presence: true, numericality: true
 
 	def self.search(search_term)
 		if (Rails.env.development? || Rails.env.test?)

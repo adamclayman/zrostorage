@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'zrostorage@clayman.org'
+  default from: 'adam@clayman.org'
   layout 'mailer'
 end

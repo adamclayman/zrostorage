@@ -1,10 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: "zrostorage@clayman.org"
+	default from: "adam@clayman.org"
 
 	def contact_form(email, name, message)
 		@message = message
 		mail(from: email,
-			to: 'zrostorage@clayman.org',
+			to: 'adam@clayman.org',
 			subject: "A new contact form message from #{name}")
 	end
 

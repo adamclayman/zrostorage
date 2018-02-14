@@ -36,7 +36,7 @@ gem 'carrierwave'
 # For authentication
 gem 'devise'
 # For authorization
-gem 'cancancan', '~> 1.10'
+gem 'cancancan', '~> 2.0'
 # For pagination
 gem 'will_paginate', '~> 3.1.0'
 # For controller testing

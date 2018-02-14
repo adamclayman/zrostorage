@@ -19,13 +19,15 @@
           <% end %>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
+
+        <% if signed_in? %>
+
           <%= form_with(url: '/payments/create') do |form| %>
             <%= render partial: "shared/stripe_checkout_button" %>
             <%= hidden_field_tag(:product_id, @product.id) %>
           <% end %>
-
-        <%= render 'new_comment' %>
-
+          <%= render 'new_comment' %>
+        <% end %>
       </div>
     </div>
   </div>

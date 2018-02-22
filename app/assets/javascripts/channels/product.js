@@ -12,7 +12,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     $(".alert.alert-info").show()
     $('.product-reviews').prepend(data.comment)
     $('#average-rating').attr('data-score', data.average_rating)
-    # Called when there's incoming data on the websocket for this channel
+    // Called when there's incoming data on the websocket for this channel
   },
 
   listen_to_comments: function() {
@@ -21,7 +21,8 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     });
   }
 
-   $(document).on('turbolinks:load', function() {
-      App.product.listen_to_comments();
-    });
+});
+
+$(document).on('turbolinks:load', function() {
+  App.product.listen_to_comments();
 });

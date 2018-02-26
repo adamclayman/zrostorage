@@ -6,7 +6,7 @@ describe User, type: :model do
 		expect(@user).to_not be_valid
 	end
 
-	it 'should not validate users without a strong password'
+	it 'should not validate users without a strong password' do
 		@user = FactoryBot.build(:user, email: "not_an_email")
 		expect(@user).to_not be_valid		
 	end

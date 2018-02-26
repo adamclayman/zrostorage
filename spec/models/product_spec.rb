@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Product do
-	let(:product) { Product.create!(name: "race bike")}
+	let(:product) { Product.create!(name: "race bike", description: "a race bike description", price: 55.00)}
 	let(:user) {User.create!(email: "adam+7@clayman.org", password: "Password")}
 	before do
 		product.comments.create!(rating: 1, user: user, body: "Awful bike!")

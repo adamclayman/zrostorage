@@ -9,16 +9,42 @@ describe Comment, type: :model do
 		product.comments.create!(rating: 5, user: user, body: "Great bike!")
 	end
 
-	it "should not validate a comment without a user_id" do
-		expect(product.comments.build(rating: 1, body: "Awful bike!")).not_to be_valid
+	it "should validate a comment with full entry data" do
+		comment = FactoryBot.build(:comment)
+		expect(comment).to be_valid
 	end
 
+	it "should not validate a comment without a user_id" do
+		comment = FactoryBot.build(:comment)
+		expect(comment).to be_valid
+
+		comment.user = nil
+		expect(comment).not_to be_valid
+	end
+
+	it "should not validate a comment without a product" do
+		comment = FactoryBot.build(:comment)
+		expect(comment).to be_valid
+
+		comment.product = nil
+		expect(comment).not_to be_valid
+	end
+
+
 	it "should not validate a comment without a body" do
-		expect(product.comments.build(rating: 1, user: user)).not_to be_valid
+		comment = FactoryBot.build(:comment)
+		expect(comment).to be_valid
+
+		comment.body = nil
+		expect(comment).not_to be_valid
 	end
 
 	it "should not validate a comment without a rating" do
-		expect(product.comments.build(user: user, body: "Awful bike!")).not_to be_valid
+		comment = FactoryBot.build(:comment)
+		expect(comment).to be_valid
+
+		comment.rating = nil
+		expect(comment).not_to be_valid
 	end
 
 end

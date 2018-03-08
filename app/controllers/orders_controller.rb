@@ -15,6 +15,10 @@ class OrdersController < ApplicationController
 	end
 
 	def create
+		super
+			if @order.persisted?
+				OrderMailer.order_form(@order).deliver_now
+			end
 	end
 
 	def destroy

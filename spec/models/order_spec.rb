@@ -15,5 +15,4 @@ describe Order, type: :model do
 	it "should not validate an order without a total" do
 		#
 	end
-	
 end

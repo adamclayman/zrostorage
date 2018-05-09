@@ -28,6 +28,12 @@ describe ProductsController, type: :controller do
 
 	describe 'POST #new' do
 		before do
+			sign_in @user
+		end
+
+		it 'posts correct new product' do
+			post :new, params: { name: @product.name, description: @product.description, image_url: @product.image_url, price: @product.price}
+			expect(response).to be_ok
 		end
 	end
 

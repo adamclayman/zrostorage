@@ -32,7 +32,7 @@ describe ProductsController, type: :controller do
 		end
 
 		it 'posts correct new product' do
-			post :new, params: { name: @product.name, description: @product.description, image_url: @product.image_url, price: @product.price}
+			post :new, params: { name: "10 x 20 Locker", description: "10x20 storage unit.", image_url: "/images/10x20.png", price: "130.00" }
 			expect(response).to be_ok
 		end
 	end

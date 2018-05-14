@@ -12,4 +12,10 @@ class UserMailer < ApplicationMailer
 		@appname = "ZRO Storage"
 		mail(to: user.email, subject: "Welcome to #{@appname}")
 	end
+
+	def payment_confirmation(user, product)
+		@purchaser = user
+		@purchased_product = product
+		@appname = "ZRO Storage"
+		mail(to: user.email, subject: "Payment Confirmation Notification, #{@appname}")
 end

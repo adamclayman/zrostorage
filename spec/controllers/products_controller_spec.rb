@@ -8,6 +8,23 @@ describe ProductsController, type: :controller do
 	end
 
 	describe 'GET #index' do
+		context 'when a user performs a search' do
+			before do
+				@product2 = FactoryBot.create(:product, name: "10x15 Storage")
+			end
+
+			it 'finds a product when a query term is searched' do
+				get :index, params: { q: "10x15 Storage"}
+				expect(response).to be_ok
+				expect(assigns(:products)).to eq [@product2]			
+			end
+
+			it 'finds both products when no query term is searched' do
+				get :index
+				expect(response).to be_ok
+				expect(assigns(:products)).to eq [@product, @product2]			
+			end
+		end
 	end
 
 	describe 'GET #show' do

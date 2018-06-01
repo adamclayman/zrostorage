@@ -42,7 +42,7 @@
 			<span class="navbar-toggler-icon"></span></button>
 			<div class="navbar-collapse collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav d-flex">
-					<ul class="navbar-nav mr-auto my-sm-2">
+					<ul class="navbar-nav my-sm-2">
 							<li class="nav-item">
 								<%= link_to "Home", root_path, class: "nav-link" %>
 							</li>
@@ -56,14 +56,14 @@
 							</li>
 					</ul>
 					<%= form_with(url: products_path, method: 'get', local: true, class: "form-inline") do |form| %>
-						<%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search", class: "form-control mr-sm-2", type: "search" %>
+						<%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search", class: "form-control", type: "search" %>
 						<%= form.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0", type: "submit" %>
 					<% end %>
 					<br>
 					<% if user_signed_in? %>
-							<%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0") %>
+							<%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0 mr-sm-2") %>
 						<% else %>
-							<%= link_to('Login', new_user_session_path, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0") %>
+							<%= link_to('Login', new_user_session_path, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0 mr-sm-2") %>
 					<% end %>
 				</div>
 			</div>

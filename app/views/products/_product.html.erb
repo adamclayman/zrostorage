@@ -1,13 +1,16 @@
 <% cache product do %>
 
-<div class="col-sm-2 col-md-4">
+<div class="col-sm-12">
 	<% if product.image_url? %>
 		<%= image_tag(product.image_url, class: "img-responsive") %>
 	<% end %>
-	<a href="#"><h1><%= product.name %></h1></a>
-	<h1><%= link_to product.name, product %></h1>
-	<p><%= product.description %></p>
-	<strong><%= product.price %></strong>
+	<div align="left">
+		<h2><%= link_to product.name, product %></h1>
+		<p><%= product.description %></p>
+		<strong><%= number_to_currency(product.price) %></strong>
+	</div>
+	<br>
+	<hr>
 </div>
 
 <% end %>

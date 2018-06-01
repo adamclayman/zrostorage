@@ -59,9 +59,9 @@
 					<% end %>
 					<br>
 					<% if user_signed_in? %>
-							<%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-dark btn-block my-2 my-sm-0") %>
+							<%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0") %>
 						<% else %>
-							<%= link_to('Login', new_user_session_path, class: "btn btn-outline-dark btn-block my-2 my-sm-0") %>
+							<%= link_to('Login', new_user_session_path, class: "btn btn-lg btn-outline-dark btn-block my-2 my-sm-0") %>
 					<% end %>
 				</div>
 			</div>

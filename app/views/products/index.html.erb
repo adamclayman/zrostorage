@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<% cache @product do %>
+
 <% cache(cache_key_for_products) do %>
   <% render @products %>
 <% end %>
@@ -43,6 +45,7 @@
   </tbody>
 </table>
 
+<% end %>
 <!--
 <div class="container-fluid">
   <div class="row">

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create(name: "Starter Locker (5'x10')", description: "Starter unit about the size of an apartment closet. Perfect for a Marie Kondō disciple!", image_url: "/images/10x5.png", price: "55.00")
-Product.create(name: "Medium Locker (10'x10')", description: "Medium unit for a single bedroom's possessions. Urbanites, rejoice!", image_url: "/images/10x10.png", price: "110.00")
+Product.create(name: "Medium Locker (10'x10')", description: "Medium unit for a single bedroom apartment's possessions. Urbanites, rejoice!", image_url: "/images/10x10.png", price: "110.00")
 Order.create(user_id: 1, product_id: 1, total: 10.0)
 Order.create(user_id: 1, product_id: 2, total: 5.0)
 user1 = User.create! :first_name => 'Adam', :last_name => 'Clayman', :email => 'adam@clayman.org', :password => 'Password', :password_confirmation => 'Password', :admin => true

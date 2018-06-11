@@ -24,6 +24,3 @@
 
 # Ignore .env
 /.env
-
-# Ignore .DS_Store
-.DS_Store

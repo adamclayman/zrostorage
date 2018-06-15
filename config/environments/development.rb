@@ -42,6 +42,9 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Enables Sprockets Better Errors Gem
+  config.assets.raise_production_errors = true
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 

@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <% cache @product do %>
-
 <% cache(cache_key_for_products) do %>
   <% render @products %>
+
 <% end %>
-
-<h1>Products</h1>
-
 <div class='container'>
+    <h1>Products</h1>
     <div class='row'>
 
     <% @products.each do |product| %>

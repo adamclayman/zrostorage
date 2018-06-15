@@ -2,11 +2,14 @@
 
 <div class="col-sm-12">
 	<hr>
+	<br>
+	<br>
+	<h2><%= link_to product.name, product %></h1>
+	<br>
 	<% if product.image_url? %>
 		<%= image_tag(product.image_url, class: "img-responsive") %>
 	<% end %>
 	<div align="left">
-		<h2><%= link_to product.name, product %></h1>
 		<p><%= product.description %></p>
         <p>Avg. Rating: <div class="rated", id="average-rating", data-score="<%= product.average_rating %>"></div></p>
 		<strong><%= number_to_currency(product.price) %></strong>

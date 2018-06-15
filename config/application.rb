@@ -29,7 +29,10 @@ module ZROstorage
     config.generators.system_tests = nil
 
     # Devise gem recommends this setting for Heroku production
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
+
+    # Supports service of static assets
+    config.serve_static_assets = true
 
     # Redis requirement
     config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'

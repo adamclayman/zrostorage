@@ -51,7 +51,7 @@ gem 'redis', '~> 3.0'
 gem 'redis-rails'
 
 # Helps in troubleshooting asset pipeline errors
-gem 'sprockets_better_errors'
+#gem 'sprockets_better_errors'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   resources :users
   root 'simple_pages#index' # root 'simple_pages#index'
 
-  get 'simple_pages/index'
-  get 'simple_pages/about'
-  get 'simple_pages/contact'
-  get 'simple_pages/login'
-  get 'simple_pages/landing_page'
+  get '/index', to: 'simple_pages#index'
+  get '/about', to: 'simple_pages#about'
+  get '/contact', to: 'simple_pages#contact'
+  get '/login', to: 'simple_pages#login'
+  get '/landing_page', to: 'simple_pages#landing_page'
 
   post 'simple_pages/thank_you'
   post 'payments/create'

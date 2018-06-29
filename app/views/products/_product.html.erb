@@ -7,7 +7,7 @@
 	<h2><%= link_to product.name, product %></h1>
 	<br>
 	<% if product.image_url? %>
-		<%= image_tag(product.image_url, class: "img-responsive") %>
+		<%= link_to image_tag(product.image_url, class: "img-responsive"), product =%>
 	<% end %>
 	<div align="left">
 		<p><%= product.description %></p>

@@ -12,9 +12,8 @@ Order.create(user_id: 1, product_id: 1, total: 10.0)
 Order.create(user_id: 1, product_id: 2, total: 5.0)
 user1 = User.create! :first_name => 'Adam', :last_name => 'Clayman', :email => 'adam@clayman.org', :password => 'Password', :password_confirmation => 'Password', :admin => true
 user2 = User.create! :first_name => 'Adam', :last_name => 'Clayman', :email => 'adc@clayman.org', :password => 'Password', :password_confirmation => 'Password', :admin => false
+Comment.create!(user: User.second, product: Product.first, rating: 5, body: "I absolutely love this company. Sign me up for a decade!")
+Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")
 Comment.create!(user: User.first, product: Product.first, rating: 1, body: "I hate the storage service I received.")
-Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I absolutely love this company. Sign me up for a decade!")
-Comment.create!(user: User.second, product: Product.first, rating: 2, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")
-Comment.create!(user: User.first, product: Product.first, rating: 1, body: "I hate the storage service I received.")
-Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I absolutely love this company. Sign me up for a decade!")
-Comment.create!(user: User.second, product: Product.first, rating: 2, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")
+Comment.create!(user: User.second, product: Product.first, rating: 5, body: "I absolutely love this company. Sign me up for a decade!")
+Comment.create!(user: User.second, product: Product.first, rating: 4, body: "I really liked the service. If I could improve anything, it would be the speed of delivery.")

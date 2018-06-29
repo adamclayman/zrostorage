@@ -13,10 +13,11 @@
         <% if @product.comments.count != 0 %>
           <p>Avg. Rating: <div class="rated", id="average-rating", data-score="<%= @product.average_rating %>"></div></p>
         <% else %>
-          <h5>Be the first to review!</h5>
+          <h5>Be the first to review.
           <% if signed_in? == false %>
-            <h5>Just sign in first!</h5>
+            Log-in.
           <% end %>
+          </h5>
         <% end %>
         <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
 

@@ -10,7 +10,7 @@
         <p>
           <%= @product.description %><br>
         </p>
-        <p>Price: <%= number_to_currency(@product.price, :unit => "$") %></p>
+        <p>Price: <%= number_to_currency(@product.price, :unit => "$") per month %></p>
         <% if signed_in? %>
           <%= form_with(url: '/payments/create') do |form| %>
             <%= render partial: "shared/stripe_checkout_button" %>

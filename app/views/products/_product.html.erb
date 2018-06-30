@@ -12,7 +12,7 @@
 	<div align="left">
 		<p><%= product.description %></p>
         <p>Avg. Rating: <div class="rated", id="average-rating", data-score="<%= product.average_rating %>"></div></p>
-		<strong><%= number_to_currency(product.price) per month %></strong>
+		<strong><%= "#{number_to_currency(product.price)} per month" %></strong>
 	</div>
 	<br>
 </div>

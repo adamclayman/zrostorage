@@ -8,8 +8,5 @@ class Ability
     	can :manage, :all
     end
   end
-
-
-
   # Only admins can add products
 end

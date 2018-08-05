@@ -11,7 +11,7 @@
           <%= @product.description %><br>
         </p>
         <p>Price: <%= "#{number_to_currency(@product.price, :unit => "$")} per month" %></p>
-        <% if signed_in? %>
+        <% if user_signed_in? %>
           <%= form_with(url: '/payments/create') do |form| %>
             <%= render partial: "shared/stripe_checkout_button" %>
             <%= hidden_field_tag(:product_id, @product.id) %>
@@ -28,7 +28,7 @@
           </h6>
         <% end %>
 
-        <% if signed_in? %>
+        <% if user_signed_in? %>
           <%= render 'new_comment' %>
         <% end %>
       </div>
